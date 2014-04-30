@@ -35,7 +35,15 @@ void RSUApplLayer:: initialize(int stage){
 }
 
 void RSUApplLayer::onBeacon(WaveShortMessage* wsm){
+    receivedBeacons++;
 
+    DBG << "Received beacon priority  " << wsm->getPriority() << " at " <<simTime() << std::endl;
+    int senderId = wsm ->getSenderAddress();
+
+    if(sendData){
+        t_channel channel = dataOnSch ? type_SCH : type_CCH;
+        sendWSM(prepareWSM("data", dataLengthBits, channel, dataPriority, senderId, 2));
+    }
 }
 
 void RSUApplLayer::onData(WaveShortMessage* wsm){
