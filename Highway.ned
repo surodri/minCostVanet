@@ -5,8 +5,6 @@ package mincostvanet;
 import org.mixim.base.connectionManager.ConnectionManager;
 import org.mixim.base.modules.BaseWorldUtility;
 import org.mixim.modules.mobility.traci.TraCIScenarioManagerLaunchd;
-import org.mixim.modules.obstacle.ObstacleControl;
-import org.mixim.modules.world.annotations.AnnotationManager;
 
 module Highway
 {
@@ -16,12 +14,6 @@ module Highway
         double playgroundSizeZ @unit(m); // z size of the area the nodes are in (in meters)
         @display("bgb=$playgroundSizeX,$playgroundSizeY");
     submodules:
-        obstacles: ObstacleControl {
-            @display("p=240,50");
-        }
-        annotations: AnnotationManager {
-            @display("p=260,50");
-        }
         connectionManager: ConnectionManager {
             parameters:
                 @display("p=150,0;i=abstract/multicast");
@@ -37,6 +29,7 @@ module Highway
             parameters:
                 @display("p=512,128");
         }
+
         
         app : RSUApplLayer{}
 

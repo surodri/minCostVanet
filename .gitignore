@@ -6,6 +6,8 @@ src/**/*_m.cc
 doc/doxy
 doc/neddoc
 
+/Makefile
+/out
 /run
 /debug
 /memcheck
