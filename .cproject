@@ -42,6 +42,8 @@
 							</tool>
 						</toolChain>
 					</folderInfo>
+					<fileInfo id="org.omnetpp.cdt.gnu.config.debug.1801700619.2000920821" name="erlangen.sumo.cfg" rcbsApplicability="disable" resourcePath="erlangen.sumo.cfg" toolsToInvoke=""/>
+					<fileInfo id="org.omnetpp.cdt.gnu.config.debug.1801700619.748810109" name="Highway.ned" rcbsApplicability="disable" resourcePath="Highway.ned" toolsToInvoke=""/>
 				</configuration>
 			</storageModule>
 			<storageModule moduleId="org.eclipse.cdt.core.externalSettings"/>
@@ -103,5 +105,12 @@
 		</scannerConfigBuildInfo>
 	</storageModule>
 	<storageModule moduleId="org.eclipse.cdt.core.LanguageSettingsProviders"/>
-	<storageModule moduleId="refreshScope"/>
+	<storageModule moduleId="refreshScope" versionNumber="2">
+		<configuration configurationName="gcc-release">
+			<resource resourceType="PROJECT" workspacePath="/minCostVanet"/>
+		</configuration>
+		<configuration configurationName="gcc-debug">
+			<resource resourceType="PROJECT" workspacePath="/minCostVanet"/>
+		</configuration>
+	</storageModule>
 </cproject>
