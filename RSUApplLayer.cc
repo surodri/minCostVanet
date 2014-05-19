@@ -29,28 +29,15 @@ RSUApplLayer::~RSUApplLayer() {
 
 Define_Module(RSUApplLayer);
 void RSUApplLayer:: initialize(int stage){
-    BaseWaveApplLayer::initialize(stage);
+    BaseApplLayer::initialize(stage);
     receivedBeacons = 0;
     receivedData = 0;
 }
 
 void RSUApplLayer::onBeacon(WaveShortMessage* wsm){
-    receivedBeacons++;
 
-    DBG << "Received beacon priority  " << wsm->getPriority() << " at " <<simTime() << std::endl;
-    int senderId = wsm ->getSenderAddress();
-
-    if(sendData){
-        t_channel channel = dataOnSch ? type_SCH : type_CCH;
-        sendWSM(prepareWSM("data", dataLengthBits, channel, dataPriority, senderId, 2));
-    }
 }
 
 void RSUApplLayer::onData(WaveShortMessage* wsm){
-    int recipientId = wsm->getRecipientAddress();
 
-    if(recipientId == myId){
-        DBG << "Received data priority " << " at " << simTime() << std::endl;
-        receivedData++;
-    }
 }

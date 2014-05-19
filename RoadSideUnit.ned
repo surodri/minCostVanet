@@ -1,10 +1,10 @@
-
 package mincostvanet;
 
 import org.mixim.base.modules.*;
 import org.mixim.modules.nic.Nic80211p;
 
-module Car
+
+module RoadSideUnit
 {
     parameters:
         string applType; //type of the application layer
@@ -29,7 +29,7 @@ module Car
             parameters:
                 @display("p=60,108;i=block/layer");
         }
-        nic: Nic80211p {
+        nic: Nic80211p{
             parameters:
                 @display("p=60,166;i=block/ifcard");
         }

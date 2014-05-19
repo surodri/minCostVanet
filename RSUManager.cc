@@ -13,34 +13,14 @@
 // along with this program.  If not, see http://www.gnu.org/licenses/.
 // 
 
-#ifndef RSUAPPLLAYER_H_
-#define RSUAPPLLAYER_H_
+#include <RSUManager.h>
 
-#include <omnetpp.h>
-#include <BaseWaveApplLayer.h>
-#include <BaseApplLayer.h>
-#include <sys/types.h>
-#include <stdint.h>
-#include <unistd.h>
+RSUManager::RSUManager() {
+    // TODO Auto-generated constructor stub
 
-#ifndef DBG
-#define DBG EV
-#endif
+}
 
-class RSUApplLayer: public BaseApplLayer {
-public:
-    RSUApplLayer();
-    virtual ~RSUApplLayer();
-    virtual void initialize(int stage);
-
-public:
-    virtual void onBeacon(WaveShortMessage* wsm);
-    virtual void onData(WaveShortMessage* wsm);
-
-protected:
-    uint32_t receivedBeacons;
-    uint32_t receivedData;
-};
-
-#endif /* RSUAPPLLAYER_H_ */
+RSUManager::~RSUManager() {
+    // TODO Auto-generated destructor stub
+}
 
